@@ -422,13 +422,14 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.08);
         }
         .time-node p { font-size: 11px; line-height: 1.4; color: var(--text-main); font-weight: 500; }
+        .time-node .sub-note { font-size: 9px; color: var(--text-muted); display: block; margin-top: 2px; }
         
         /* การกำหนดสี Icon ในไทม์ไลน์ 13 ขั้นตอน */
         .time-node:nth-child(1) .node-icon, .time-node:nth-child(2) .node-icon { border-color: var(--pink); color: var(--pink); }
-        .time-node:nth-child(3) .node-icon, .time-node:nth-child(4) .node-icon { border-color: #3182CE; color: #3182CE; } /* ฟ้า */
+        .time-node:nth-child(3) .node-icon, .time-node:nth-child(4) .node-icon { border-color: #3182CE; color: #3182CE; }
         .time-node:nth-child(5) .node-icon, .time-node:nth-child(6) .node-icon { border-color: var(--orange); color: var(--orange); }
-        .time-node:nth-child(7) .node-icon, .time-node:nth-child(8) .node-icon { border-color: #38A169; color: #38A169; } /* เขียว */
-        .time-node:nth-child(9) .node-icon, .time-node:nth-child(10) .node-icon { border-color: #805AD5; color: #805AD5; } /* ม่วง */
+        .time-node:nth-child(7) .node-icon, .time-node:nth-child(8) .node-icon { border-color: #38A169; color: #38A169; }
+        .time-node:nth-child(9) .node-icon, .time-node:nth-child(10) .node-icon { border-color: #805AD5; color: #805AD5; }
         .time-node:nth-child(11) .node-icon, .time-node:nth-child(12) .node-icon, .time-node:nth-child(13) .node-icon { border-color: var(--primary-blue); color: var(--primary-blue); }
         
         /* Deliverables Section */
@@ -479,11 +480,23 @@
         .del-item h4 { font-size: 13px; color: var(--primary-blue); margin-bottom: 4px; }
         .del-item p { font-size: 11px; color: var(--text-muted); }
 
+        /* Footer Notes */
+        .footer-notes {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            border: 1px dashed #CBD5E0;
+            font-size: 11px;
+            color: #718096;
+            text-align: center;
+            line-height: 1.6;
+        }
+
         /* =========================================
            RESPONSIVE DESIGN (Media Queries) 
            ========================================= */
-
-        @media (max-width: 1200px) {
+        @media (max-width: 1250px) {
             .timeline-track { overflow-x: auto; padding-bottom: 15px; }
             .time-node { min-width: 90px; }
         }
@@ -543,7 +556,7 @@
             <div class="title-text">
                 <h1>ศูนย์ข้อมูลด้านวัฒนธรรมแห่งชาติ</h1>
                 <h2>(Thailand Cultural Intelligence Center: TCIC)</h2>
-                <p>สำนักงานปลัดกระทรวงวัฒนธรรม &nbsp;|&nbsp; ข้อมูลอ้างอิง ณ 11 สิงหาคม 2569</p>
+                <p>สำนักงานปลัดกระทรวงวัฒนธรรม &nbsp;|&nbsp; กิจกรรมการจัดทำโครงสร้างพื้นฐานข้อมูลวัฒนธรรม</p>
             </div>
         </div>
 
@@ -558,11 +571,11 @@
                 <i class="fa-regular fa-calendar-days"></i>
                 <div class="stat-title">ระยะเวลาดำเนินงาน</div>
                 <div class="stat-value">450</div>
-                <div class="stat-sub">วัน</div>
+                <div class="stat-sub">วัน (15 เดือน)</div>
             </div>
             <div class="stat-box">
                 <i class="fa-solid fa-file-contract"></i>
-                <div class="stat-title">การจัดจ้าง</div>
+                <div class="stat-title">รูปแบบการจัดจ้าง</div>
                 <div class="stat-value">1</div>
                 <div class="stat-sub">คู่สัญญาหลักเดียว</div>
             </div>
@@ -582,11 +595,11 @@
 
         <div class="overview-area">
             <h3><i class="fa-solid fa-circle-user"></i> ภาพรวมโครงการ</h3>
-            <p>TCIC ไม่ใช่การสร้างเว็บไซต์ใหม่เพิ่มอีกหนึ่งระบบ แต่เป็นการจัดระเบียบและเชื่อมโยงข้อมูลเดิมที่มีคุณค่าด้วยมาตรฐานเดียวกัน พร้อมกำหนดผู้รับผิดชอบและกติกาการใช้งาน ก่อนพัฒนาเป็นบริการกลางสำหรับประชาชน บุคลากร และผู้บริหาร</p>
+            <p>TCIC ไม่ใช่การสร้างเว็บไซต์ใหม่เพิ่มอีกหนึ่งระบบ แต่เป็นการจัดระเบียบระบบและข้อมูลเดิม เชื่อมโยงข้อมูลที่มีคุณค่าด้วยมาตรฐานเดียว กำหนดเจ้าของข้อมูลและกติกาการใช้ข้อมูล ก่อนพัฒนาบริการกลางสำหรับประชาชน บุคลากร และผู้บริหาร</p>
         </div>
     </div>
 
-    <!-- Main Grid Adaptive -->
+    <!-- Main Grid -->
     <div class="main-grid">
         <!-- Col 1 -->
         <div class="col-box pink-col">
@@ -596,27 +609,27 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <div>
                         <h4>ข้อมูลกระจัดกระจาย ไม่เป็นมาตรฐาน</h4>
-                        <p>ผู้ใช้ต้องค้นหาจากหลายจุด ข้อมูลบางส่วนซ้ำซ้อนหรือไม่เป็นปัจจุบัน</p>
+                        <p>ผู้ใช้ต้องค้นหาหลายจุด ข้อมูลบางส่วนซ้ำหรือไม่เป็นปัจจุบัน</p>
                     </div>
                 </div>
                 <div class="reason-item">
                     <i class="fa-solid fa-puzzle-piece"></i>
                     <div>
                         <h4>ขาดกลไกบูรณาการและใช้ประโยชน์ร่วมกัน</h4>
-                        <p>ข้อมูลจากหลายระบบยังไม่สามารถเชื่อมโยงและนำไปใช้ประโยชน์ร่วมกันได้อย่างเป็นระบบ</p>
+                        <p>ข้อมูลจากหลายระบบยังไม่สามารถเชื่อมโยงและใช้ประโยชน์ร่วมกันได้อย่างเป็นระบบ</p>
                     </div>
                 </div>
                 <div class="reason-item">
                     <i class="fa-solid fa-chart-pie"></i>
                     <div>
-                        <h4>ข้อมูลสนับสนุนการตัดสินใจยังไม่เพียงพอ</h4>
-                        <p>การสรุปข้อมูลใช้เวลานาน และขาดเครื่องมือวิเคราะห์เชิงลึกสำหรับผู้บริหาร</p>
+                        <h4>ข้อมูลเพื่อการตัดสินใจยังไม่เพียงพอ</h4>
+                        <p>การสรุปข้อมูลใช้เวลา และยังขาดเครื่องมือวิเคราะห์เชิงลึกสำหรับผู้บริหาร</p>
                     </div>
                 </div>
                 
                 <div class="goal-box">
                     <h4><i class="fa-solid fa-bullseye" style="color:var(--pink);"></i> เป้าหมายหลัก</h4>
-                    <p>สร้างโครงสร้างพื้นฐานข้อมูลและบริการกลาง เพื่อเชื่อมโยงข้อมูลวัฒนธรรมอย่างมีมาตรฐาน สามารถตรวจสอบย้อนกลับได้ และนำไปใช้ประโยชน์ด้านการบริหารและบริการสาธารณะอย่างเป็นรูปธรรม</p>
+                    <p>สร้างโครงสร้างพื้นฐานข้อมูลและบริการกลาง เพื่อเชื่อมโยงข้อมูลวัฒนธรรมอย่างมีมาตรฐาน ตรวจสอบย้อนกลับได้ และนำไปใช้ประโยชน์ด้านการบริหารและบริการสาธารณะ</p>
                 </div>
             </div>
         </div>
@@ -629,17 +642,17 @@
                 <div class="flow-step">
                     <div class="step-circle">1</div>
                     <h4 style="color:var(--pink);">สำรวจและวางสถาปัตยกรรม (EA)</h4>
-                    <p>สำรวจระบบและข้อมูลเดิม จัดหมวดหมู่ พร้อมกำหนดทิศทาง: คงไว้, ปรับปรุง, เชื่อมโยง, ย้าย, หรือยุติระบบ</p>
+                    <p>สำรวจระบบและข้อมูลเดิม จัดหมวดหมู่ กำหนดว่าจะคง ปรับปรุง เชื่อมโยง ย้ายข้อมูล รวมระบบ หรือยุติระบบใด</p>
                 </div>
                 <div class="flow-step">
                     <div class="step-circle">2</div>
                     <h4 style="color:var(--primary-blue);">พัฒนา TCIC Core</h4>
-                    <p>รวบรวมข้อมูลและเมทาดาทา จัดทำ Data Catalog, รหัสอ้างอิง, แหล่งที่มา, ประวัติข้อมูล และ API</p>
+                    <p>รวมข้อมูลและเมทาดาทา จัดทำ Data Catalog รหัสอ้างอิง แหล่งที่มา ประวัติข้อมูล และ API</p>
                 </div>
                 <div class="flow-step">
                     <div class="step-circle">3</div>
                     <h4 style="color:var(--orange);">เปิดตัว TCICpedia</h4>
-                    <p>บริการค้นหา เสนอข้อมูล ดาวน์โหลด เชื่อมต่อ AI Chatbot และระบบแปลภาษาไทย-อังกฤษ</p>
+                    <p>ค้นหา เสนอข้อมูล ดาวน์โหลด เชื่อมบริการ AI Chatbot และแปลไทย–อังกฤษ</p>
                 </div>
             </div>
 
@@ -655,7 +668,7 @@
                 </div>
                 <div style="font-size:13px; margin-bottom:10px; font-weight:600;">🔎 ค้นหาข้อมูลวัฒนธรรมของไทย</div>
                 <div class="ui-search">
-                    <span>บุคคล สถานที่ ประเพณี ภูมิปัญญา องค์ความรู้...</span>
+                    <span>บุคคล สถานที่ ประเพณี ภูมิปัญญา องค์ความรู้ และบริการ...</span>
                     <i class="fa-solid fa-magnifying-glass" style="color: white; background: var(--purple); padding: 8px; border-radius: 50%;"></i>
                 </div>
                 
@@ -706,7 +719,7 @@
             </div>
             
             <div class="training-banner">
-                <i class="fa-solid fa-users-gear"></i> มุ่งเน้นพัฒนาทักษะผู้ใช้งาน ผู้ดูแลระบบ ผู้จัดทำข้อมูล และเครือข่ายตลอดโครงการ
+                <i class="fa-solid fa-users-gear"></i> พัฒนาทักษะผู้ใช้ ผู้ดูแลระบบ ผู้จัดทำข้อมูล และเครือข่ายตลอดโครงการ
             </div>
         </div>
 
@@ -718,42 +731,42 @@
                     <i class="fa-solid fa-bullseye"></i>
                     <div>
                         <h4>เข้าถึงข้อมูลวัฒนธรรมได้ง่ายขึ้น</h4>
-                        <p>สามารถค้นหาจากจุดเดียว ทราบแหล่งที่มา และสามารถตรวจสอบย้อนกลับได้</p>
+                        <p>ค้นหาจากจุดเดียว พร้อมแหล่งที่มาและข้อมูลที่ตรวจสอบย้อนกลับได้</p>
                     </div>
                 </div>
                 <div class="outcome-item">
                     <i class="fa-solid fa-share-nodes"></i>
                     <div>
                         <h4>เชื่อมโยงข้อมูลและบริการ</h4>
-                        <p>ลดการทำงานซ้ำซ้อน และเพิ่มประสิทธิภาพในการนำข้อมูลไปใช้ประโยชน์ร่วมกัน</p>
+                        <p>ลดงานซ้ำซ้อน และเพิ่มประสิทธิภาพการใช้ข้อมูลร่วมกัน</p>
                     </div>
                 </div>
                 <div class="outcome-item">
                     <i class="fa-solid fa-chart-line"></i>
                     <div>
                         <h4>ข้อมูลเพื่อการตัดสินใจ</h4>
-                        <p>มีระบบวิเคราะห์แนวโน้ม คาดการณ์ความเสี่ยง โดยระบุที่มาและผ่านการรับรองก่อนใช้งาน</p>
+                        <p>วิเคราะห์แนวโน้ม คาดการณ์ และเตือนความเสี่ยง โดยแสดงที่มาของข้อมูลและให้ผู้รับผิดชอบรับรองก่อนใช้</p>
                     </div>
                 </div>
                 <div class="outcome-item">
                     <i class="fa-solid fa-users-viewfinder"></i>
                     <div>
-                        <h4>ขับเคลื่อนงานเชิงยุทธศาสตร์</h4>
-                        <p>สนับสนุนการบริหารจัดการโครงการ การติดตามประเมินผล และการตัดสินใจเชิงบริหาร</p>
+                        <h4>ขับเคลื่อนงานวัฒนธรรมเชิงยุทธศาสตร์</h4>
+                        <p>สนับสนุนการบริหารโครงการ การติดตามประเมินผล และการตัดสินใจของผู้บริหาร</p>
                     </div>
                 </div>
                 <div class="outcome-item">
                     <i class="fa-solid fa-lock"></i>
                     <div>
                         <h4>มาตรฐาน ความมั่นคงปลอดภัย และ PDPA</h4>
-                        <p>มีการกำหนดสิทธิ์ ควบคุมคุณภาพข้อมูล มีระบบสำรอง/กู้คืน และสอดคล้องกับกฎหมาย PDPA</p>
+                        <p>กำหนดสิทธิ แหล่งที่มา คุณภาพข้อมูล การสำรองและกู้คืนระบบ รวมถึงการดำเนินงานให้สอดคล้องกับ PDPA</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Timeline 15 Months Adaptive -->
+    <!-- Timeline 15 Months -->
     <div class="timeline-section">
         <h3>4. แผนการดำเนินงาน 15 เดือน (450 วัน)</h3>
         <div class="timeline-track">
@@ -771,7 +784,7 @@
             </div>
             <div class="time-node">
                 <div class="node-icon"><i class="fa-solid fa-globe"></i></div>
-                <p>พัฒนา<br>TCICpedia</p>
+                <p>พัฒนา<br>TCICpedia<br><span class="sub-note">(ต้นแบบ: มี.ค. 2570)</span></p>
             </div>
             <div class="time-node">
                 <div class="node-icon"><i class="fa-solid fa-handshake"></i></div>
@@ -795,7 +808,7 @@
             </div>
             <div class="time-node">
                 <div class="node-icon"><i class="fa-solid fa-rocket"></i></div>
-                <p>เปิดใช้งาน<br>TCICpedia</p>
+                <p>เปิดใช้งาน<br>TCICpedia<br><span class="sub-note">(Release 1: ต.ค. 2570)</span></p>
             </div>
             <div class="time-node">
                 <div class="node-icon"><i class="fa-solid fa-chart-pie"></i></div>
@@ -821,39 +834,44 @@
             <div class="del-item">
                 <i class="fa-solid fa-database"></i>
                 <h4>TCIC Core</h4>
-                <p>คลังข้อมูล/เมทาดาทากลาง</p>
+                <p>คลังข้อมูลและเมทาดาทากลาง</p>
             </div>
             <div class="del-item">
                 <i class="fa-solid fa-globe"></i>
                 <h4>TCICpedia</h4>
-                <p>ค้นหา เสนอ และดาวน์โหลด</p>
+                <p>ค้นหา เสนอข้อมูล ดาวน์โหลด และเชื่อมบริการ</p>
             </div>
             <div class="del-item">
                 <i class="fa-solid fa-map-location"></i>
                 <h4>Cultural Mapping</h4>
-                <p>แผนที่วัฒนธรรม 77 จังหวัด</p>
+                <p>ครอบคลุม 77 จังหวัด</p>
             </div>
             <div class="del-item">
                 <i class="fa-solid fa-chart-column"></i>
                 <h4>Full CSA</h4>
-                <p>เป้าหมาย 8,000 ตัวอย่าง</p>
+                <p>เป้าหมายเบื้องต้น 8,000 ตัวอย่าง</p>
             </div>
             <div class="del-item">
                 <i class="fa-solid fa-clipboard-list"></i>
                 <h4>Project Portfolio & M&E</h4>
-                <p>บริหารโครงการต้น-ปลายน้ำ</p>
+                <p>บริหารโครงการตั้งแต่ต้นน้ำถึงปลายน้ำ</p>
             </div>
             <div class="del-item">
                 <i class="fa-solid fa-tv"></i>
                 <h4>Executive AI Dashboard</h4>
-                <p>ประเมินแนวโน้มและแจ้งเตือน</p>
+                <p>แนวโน้ม คาดการณ์ และเตือนความเสี่ยง</p>
             </div>
             <div class="del-item">
                 <i class="fa-solid fa-robot"></i>
                 <h4>API / AI Chatbot</h4>
-                <p>บริการเชื่อมต่อและถาม-ตอบ</p>
+                <p>บริการเชื่อมต่อและถาม–ตอบอัจฉริยะ</p>
             </div>
         </div>
+    </div>
+    
+    <!-- Footer Notes -->
+    <div class="footer-notes">
+        ข้อมูลอ้างอิง ณ 11 สิงหาคม 2569 &nbsp;|&nbsp; * หมุดหมายเดือนมีนาคม 2570 และวันที่ 3 ตุลาคม 2570 ต้องเทียบกับวันเริ่มสัญญาจริง &nbsp;|&nbsp; * Full CSA จำนวน 8,000 ตัวอย่างเป็นเป้าหมายเบื้องต้น และต้องเป็นไปตาม Sampling Design ที่ผ่านการทบทวนก่อนเก็บข้อมูลจริง
     </div>
 
 </div>
